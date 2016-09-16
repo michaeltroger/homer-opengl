@@ -1,3 +1,6 @@
+# homer drawn with simple shapes
+![homer](homer.png)
+
 install tools for compiling:
 sudo apt-get install g++ freeglut3 freeglut3-dev
 
