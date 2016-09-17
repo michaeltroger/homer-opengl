@@ -1,2 +1,5 @@
 # ignore compiled file
 homer
+
+.vscode
+.vscode/*
