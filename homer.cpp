@@ -1,5 +1,5 @@
 /**
-Copyright 2016 Michael Troger
+Copyright 2016 Michael Troger <https://michaeltroger.com>
 This file is part of Homer in OpenGL.
 
 Homer in OpenGL is free software: you can redistribute it and/or modify
