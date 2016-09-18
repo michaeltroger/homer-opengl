@@ -1,19 +1,21 @@
 /**
-This file is part of Homer in OpenGL by Michael Troger.
+Copyright 2016 Michael Troger
+This file is part of Homer in OpenGL.
 
-Homer in OpenGL by Michael Troger is free software: you can redistribute it and/or modify
+Homer in OpenGL is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Homer in OpenGL by Michael Troger is distributed in the hope that it will be useful,
+Homer in OpenGL is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Homer in OpenGL by Michael Troger.  If not, see <http://www.gnu.org/licenses/>.
+along with Homer in OpenGL.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 #include <stdlib.h>
 #include <GL/glut.h>
 #define _USE_MATH_DEFINES
@@ -321,28 +323,6 @@ void display()
 	//clear all pixels
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	/*  exercise in class
-	glPushMatrix();
-		drawQuad("white");
-
-		glTranslatef(0, 1, 0);
-		drawQuad("blue");
-
-		glTranslatef(1, 0, 0);
-		drawQuad("red");
-	glPopMatrix();
-
-	drawTriangle("grey");
-	drawCircle("blue");
-
-	glTranslatef(0, -1, 0);
-	drawQuad("green");
-
-	glTranslatef(1.2, 0, 0);
-	glRotatef(45.0, 0, 0, 1.0);
-	drawQuad("yellow");
-	*/
-
 	drawHomer();
 
 	//don't wait! process buffered OpenGL routines
@@ -361,7 +341,6 @@ void init()
 	glOrtho(-2.6, 2.6, -2.6, 2.6, -1.0, 1.0); // normal front camera, size halved
 	// glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
 	
-
 	//set matrix-mode back to model-view for rendering
 	glMatrixMode(GL_MODELVIEW);
 }
@@ -376,7 +355,7 @@ int main(int argc, char** argv)
 	//initialize window size and position. open window
 	glutInitWindowSize(350, 350); 
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("OpenGL - CGR");
+	glutCreateWindow("Homer in OpenGL");
 
 	//call initialization routine
 	init();
