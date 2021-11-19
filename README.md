@@ -1,4 +1,4 @@
-# homer drawn with simple shapes
+# Homer Simpson drawn with simple shapes in OpenGL and C++
 ![homer](homer.png)
 
 install tools for compiling:
