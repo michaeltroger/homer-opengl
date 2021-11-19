@@ -19,7 +19,9 @@ jobs:
       run: g++ homer.cpp -o homer -lGL -lglut\
     - name: Give execution permission
       run: chmod +x homer
+    - name: Create tar to keep file permissions
+      run: tar -cvf app.tar homer
     - uses: actions/upload-artifact@v2
       with:
         name: app
-        path: homer
+        path: app.tar
