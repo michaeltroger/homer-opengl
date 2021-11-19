@@ -1,21 +1,3 @@
-/**
-Copyright 2016 Michael Troger <https://michaeltroger.com>
-This file is part of Homer in OpenGL.
-
-Homer in OpenGL is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-Homer in OpenGL is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with Homer in OpenGL.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 #include <stdlib.h>
 #include <GL/glut.h>
 #define _USE_MATH_DEFINES
@@ -42,7 +24,7 @@ void setColor(const std::string& color) {
 		glColor3ub(255, 255, 255);
 	}
 }
-// draws a quad
+
 void drawQuad(const std::string& color)
 {
 	setColor(color);
@@ -54,7 +36,7 @@ void drawQuad(const std::string& color)
 		glVertex3f(0.5, -0.5, 0.0);
 	glEnd();
 }
-// draws a triangle
+
 void drawTriangle(const std::string& color)
 {
 	setColor(color);
@@ -65,7 +47,7 @@ void drawTriangle(const std::string& color)
 		glVertex3f(0, 0.5, 0);
 	glEnd();
 }
-// draws a line
+
 void drawLine(const std::string& color)
 {
 	setColor(color);
@@ -75,7 +57,7 @@ void drawLine(const std::string& color)
 		glVertex3f(0.5, 0, 0);
 	glEnd();
 }
-// draws a circle
+
 void drawCircle(const std::string& color)
 {
 	setColor(color);
@@ -93,7 +75,9 @@ void drawCircle(const std::string& color)
 		}
 	glEnd();
 }
-void drawPolygon(const std::string& color) {
+
+void drawPolygon(const std::string& color) 
+{
 	setColor(color);
 	
 	glBegin(GL_POLYGON);
@@ -103,7 +87,9 @@ void drawPolygon(const std::string& color) {
 		glVertex3f(-0.6, -0.1, 0.0);
 	glEnd();
 }
-void drawToes() {
+
+void drawToes() 
+{
 	glScalef(0.25, 0.25, 0);
 
 	glPushMatrix();
@@ -130,7 +116,9 @@ void drawToes() {
 		drawLine("black");
 	glPopMatrix();
 }
-void drawFeet() {
+
+void drawFeet() 
+{
 	glPushMatrix(); // feet
 		glTranslatef(0, -1.4, 0);
 
@@ -159,7 +147,9 @@ void drawFeet() {
 
 	glPopMatrix(); // end feet
 }
-void drawArms() {
+
+void drawArms() 
+{
 	glPushMatrix(); //arms
 		glScalef(0.5, 0.5, 0);
 		glTranslatef(0, -1.5, 0);
@@ -179,7 +169,9 @@ void drawArms() {
 
 	glPopMatrix(); // end arms
 }
-void drawBody() {
+
+void drawBody() 
+{
 	glPushMatrix(); // body
 		glScalef(2.2, 1.8, 0);
 		drawCircle("yellow");
@@ -196,7 +188,9 @@ void drawBody() {
 
 	glPopMatrix(); // end body
 }
-void drawHair() {
+
+void drawHair() 
+{
 	glPushMatrix(); //hair left
 		glTranslatef(0, 0.9, 0);
 		glRotatef(75, 0, 0, 1);
@@ -210,7 +204,8 @@ void drawHair() {
 	glPopMatrix();
 }
 
-void drawEyes() {
+void drawEyes() 
+{
 	glPushMatrix(); // eye
 		// left eye
 		glScalef(0.4, 0.4, 0);
@@ -236,7 +231,9 @@ void drawEyes() {
 		glPopMatrix();	// end right eye
 	glPopMatrix(); // end eyes
 }
-void drawEars() {
+
+void drawEars() 
+{
 	glPushMatrix(); // ears
 		glScalef(0.2, 0.2, 0);
 
@@ -262,7 +259,9 @@ void drawEars() {
 
 	glPopMatrix(); // end ears
 }
-void drawMouth() {
+
+void drawMouth() 
+{
 	glPushMatrix(); // mouth
 		glScalef(0.8, 0.7, 0);
 		glTranslatef(0, -0.2, 0);
@@ -274,7 +273,9 @@ void drawMouth() {
 		drawTriangle("black");
 	glPopMatrix(); // end mouth
 }
-void drawHead() {
+
+void drawHead() 
+{
 	glPushMatrix(); // head
 		glTranslatef(0, 1.5, 0);
 
@@ -311,12 +312,14 @@ void drawHead() {
 	glPopMatrix(); // end head
 }
 
-void drawHomer() {
+void drawHomer() 
+{
 	drawFeet();
 	drawArms();
 	drawBody();
 	drawHead();
 }
+
 //render method (callback-function)
 void display()
 {
