@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: sudo apt-get install -y freeglut3-dev
     - name: Build
       run: g++ homer.cpp -o homer -lGL -lglut
     - uses: actions/upload-artifact@v2
