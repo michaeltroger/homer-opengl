@@ -1,4 +1,5 @@
 # Homer Simpson drawn with simple shapes in OpenGL and C++
+## Low level through matrix/vector operations
 [![CI](https://github.com/michaeltroger/homer/actions/workflows/ci.yml/badge.svg)](https://github.com/michaeltroger/homer/actions/workflows/ci.yml)
 
 ![homer](homer.png)
